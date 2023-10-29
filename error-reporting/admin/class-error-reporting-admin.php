@@ -53,10 +53,22 @@ class Error_Reporting_Admin {
 
 	}
 
+	/**
+	 * Adds the settings page to the menu
+	 *
+	 * @since    1.0.0
+	 * @return void
+	 */
 	public function add_menu_page() {
 		add_options_page(__('Error reporting settings', 'error-reporting'), __('Error reporting', 'error-reporting'), 'manage_options', 'error-reporting-plugin', [$this, 'settings_page']);
 	}
 
+	/**
+	 * Outputs the settings page
+	 *
+	 * @since    1.0.0
+	 * @return void
+	 */
 	public function settings_page() {
 		$this->processSubmit();
 		$init_value = (int)error_reporting();
@@ -82,6 +94,12 @@ class Error_Reporting_Admin {
 		<?php
 	}
 
+	/**
+	 * Save changes
+	 *
+	 * @since    1.0.0
+	 * @return void
+	 */
 	private function processSubmit() {
 		if(!empty($_POST['error_reporting_form_submit']) && current_user_can('manage_options')) {
 			if(isset($_POST['error_reporting_set_level']) && is_numeric($_POST['error_reporting_set_level'])) {
