@@ -79,7 +79,7 @@ class Error_Reporting_Admin {
 	}
 
 	private function processSubmit() {
-		if(!empty($_POST['error_reporting_form_submit'])) {
+		if(!empty($_POST['error_reporting_form_submit']) && current_user_can('manage_options')) {
 			if(isset($_POST['error_reporting_set_level']) && is_numeric($_POST['error_reporting_set_level'])) {
 				$new_level = (int)$_POST['error_reporting_set_level'];
 				error_reporting($new_level);
