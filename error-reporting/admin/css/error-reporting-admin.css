@@ -1,0 +1,12 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .error_reporting_label {
+    margin-right: 10px;
+ }
+
+ .error_reporting_set_all, .error_reporting_set_none {
+   margin-right: 10px;
+ }
