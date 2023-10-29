@@ -54,28 +54,33 @@ class Error_Reporting_Admin {
 	}
 
 	public function add_menu_page() {
-		add_menu_page('Error Reporting Settings', 'Error Reporting', 'manage_options', 'error-reporting-plugin', [$this, 'settings_page'] );
+		// function add_options_page( $page_title, $menu_title, $capability, $menu_slug, $callback = '', $position = null ) 
+		add_options_page('Error Reporting Settings', 'Error Reporting', 'manage_options', 'error-reporting-plugin', [$this, 'settings_page']);
 	}
 
 	public function settings_page() {
 		$this->processSubmit();
 		$init_value = (int)error_reporting();
 		?>
-		<h1>Error Reporting Settings</h1>
-		<h2>Error level</h2>
-		<form class="error_reporting_set_form" action="" method="POST">
-			<input type="hidden" name="error_reporting_set_level" class="error_reporting_calculated_level" value="<?= $init_value ?>" />
-			<a class="error_reporting_set_all" href="" onclick="return false">Set all</a>
-			<a class="error_reporting_set_none" href="" onclick="return false">Unset all</a>
-			<input type="submit" class="button button-primary" name="error_reporting_form_submit" value="Save" />
-		</form>
-		<hr>
-		<?php
-		foreach(Error_Reporting_Errorlevels::getAll() as $value => $name) {
-			?>
-			<label class="error_reporting_label"><input type="checkbox" class="error_reporting_value error_reporting_single" value="<?= $value ?>" /><?= $name ?></label><br />
+		<div class="wrap">
+			<h1>Settings &rsaquo; Error reporting</h1>
+			<h2>Error level</h2>
+			<form class="error_reporting_set_form" action="" method="POST">
+				<input type="hidden" name="error_reporting_set_level" class="error_reporting_calculated_level" value="<?= $init_value ?>" />
+				<a class="error_reporting_set_all" href="" onclick="return false">Set all</a>
+				<a class="error_reporting_set_none" href="" onclick="return false">Unset all</a>
+				<input type="submit" class="button button-primary" name="error_reporting_form_submit" value="Save" />
+			</form>
+			<hr>
 			<?php
-		}
+			foreach(Error_Reporting_Errorlevels::getAll() as $value => $name) {
+				?>
+				<label class="error_reporting_label"><input type="checkbox" class="error_reporting_value error_reporting_single" value="<?= $value ?>" /><?= $name ?></label><br />
+				<?php
+			}
+			?>
+		</div>
+		<?php
 	}
 
 	private function processSubmit() {
