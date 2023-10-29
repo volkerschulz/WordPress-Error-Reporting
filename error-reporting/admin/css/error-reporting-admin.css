@@ -10,3 +10,7 @@
  .error_reporting_set_all, .error_reporting_set_none {
    margin-right: 10px;
  }
+
+ .error_reporting_set_form a {
+  vertical-align: bottom;
+ }

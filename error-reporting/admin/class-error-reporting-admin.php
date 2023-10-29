@@ -63,7 +63,7 @@ class Error_Reporting_Admin {
 		?>
 		<h1>Error Reporting Settings</h1>
 		<h2>Error level</h2>
-		<form action="" method="POST">
+		<form class="error_reporting_set_form" action="" method="POST">
 			<input type="hidden" name="error_reporting_set_level" class="error_reporting_calculated_level" value="<?= $init_value ?>" />
 			<a class="error_reporting_set_all" href="" onclick="return false">Set all</a>
 			<a class="error_reporting_set_none" href="" onclick="return false">Unset all</a>
