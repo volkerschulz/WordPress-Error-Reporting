@@ -32,10 +32,10 @@ class Error_Reporting_Deactivator {
 		$target_file = get_option('error-reporting-mu-file');
 		if(!empty($target_file)) {
 			if(!unlink($target_file)) {
-				trigger_error(
+				/* trigger_error(
 					'Could not unlink mu-file', 
 					E_USER_ERROR
-				);
+				); */
 			}
 			delete_option('error-reporting-mu-file');
 		}
