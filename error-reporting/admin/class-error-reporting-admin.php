@@ -54,8 +54,7 @@ class Error_Reporting_Admin {
 	}
 
 	public function add_menu_page() {
-		// function add_options_page( $page_title, $menu_title, $capability, $menu_slug, $callback = '', $position = null ) 
-		add_options_page('Error Reporting Settings', 'Error Reporting', 'manage_options', 'error-reporting-plugin', [$this, 'settings_page']);
+		add_options_page('Error reporting settings', 'Error reporting', 'manage_options', 'error-reporting-plugin', [$this, 'settings_page']);
 	}
 
 	public function settings_page() {
