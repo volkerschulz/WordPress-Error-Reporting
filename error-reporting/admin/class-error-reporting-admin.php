@@ -62,13 +62,13 @@ class Error_Reporting_Admin {
 		$init_value = (int)error_reporting();
 		?>
 		<div class="wrap">
-			<h1>Settings &rsaquo; Error reporting</h1>
-			<h2>Error level</h2>
+			<h1><?= __('Settings &rsaquo; Error reporting', 'error-reporting'); ?></h1>
+			<h2><?= __('Error level', 'error-reporting'); ?></h2>
 			<form class="error_reporting_set_form" action="" method="POST">
 				<input type="hidden" name="error_reporting_set_level" class="error_reporting_calculated_level" value="<?= $init_value ?>" />
-				<a class="error_reporting_set_all" href="" onclick="return false">Set all</a>
-				<a class="error_reporting_set_none" href="" onclick="return false">Unset all</a>
-				<input type="submit" class="button button-primary" name="error_reporting_form_submit" value="Save" />
+				<a class="error_reporting_set_all" href="" onclick="return false"><?= __('Set all', 'error-reporting'); ?></a>
+				<a class="error_reporting_set_none" href="" onclick="return false"><?= __('Unset all', 'error-reporting'); ?></a>
+				<input type="submit" class="button button-primary" name="error_reporting_form_submit" value="<?= __('Save', 'error-reporting'); ?>" />
 			</form>
 			<hr>
 			<?php
