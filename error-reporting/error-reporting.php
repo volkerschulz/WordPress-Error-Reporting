@@ -14,11 +14,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Error Reporting
- * Plugin URI:        http://example.com/error-reporting-uri/
+ * Plugin URI:        https://github.com/volkerschulz/WordPress-Error-Reporting
  * Description:       Allows Admins to granularly control PHP's error reporting level.
  * Version:           1.0.0
  * Author:            volkerschulz
- * Author URI:        https://volkerschulz.de/
+ * Author URI:        https://volkerschulz.de
  * License:           GPLv3 or later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       error-reporting
@@ -59,6 +59,25 @@ function deactivate_error_reporting() {
 
 register_activation_hook( __FILE__, 'activate_error_reporting' );
 register_deactivation_hook( __FILE__, 'deactivate_error_reporting' );
+
+/**
+ * Add link to setting in plugin overview
+ */
+function settings_link_for_error_reporting($links) {
+	$url = esc_url( add_query_arg(
+		'page',
+		'error-reporting-plugin',
+		get_admin_url() . 'options-general.php'
+	) );
+	$settings_link = "<a href='$url'>" . __( 'Settings' ) . '</a>';
+	array_push(
+		$links,
+		$settings_link
+	);
+	return $links;
+}
+
+add_filter( 'plugin_action_links_error-reporting/error-reporting.php', 'settings_link_for_error_reporting' );
 
 /**
  * The core plugin class that is used to define internationalization,
