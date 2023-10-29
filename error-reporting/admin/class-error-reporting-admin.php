@@ -67,7 +67,7 @@ class Error_Reporting_Admin {
 			<input type="hidden" name="error_reporting_set_level" class="error_reporting_calculated_level" value="<?= $init_value ?>" />
 			<a class="error_reporting_set_all" href="" onclick="return false">Set all</a>
 			<a class="error_reporting_set_none" href="" onclick="return false">Unset all</a>
-			<input type="submit" name="error_reporting_form_submit" value="Save" />
+			<input type="submit" class="button button-primary" name="error_reporting_form_submit" value="Save" />
 		</form>
 		<hr>
 		<?php
