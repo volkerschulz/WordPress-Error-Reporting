@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-10-29 18:00+0100\n"
+"PO-Revision-Date: 2023-10-29 18:03+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: admin/class-error-reporting-admin.php:57
+msgid "Error reporting settings"
+msgstr "Error-Reporting Einstellungen"
+
+#: admin/class-error-reporting-admin.php:57
+msgid "Error reporting"
+msgstr "Error-Reporting"
+
+#: admin/class-error-reporting-admin.php:65
+msgid "Settings &rsaquo; Error reporting"
+msgstr "Einstellungen &rsaquo; Error-Reporting"
+
+#: admin/class-error-reporting-admin.php:66
+msgid "Error level"
+msgstr "Error level"
+
+#: admin/class-error-reporting-admin.php:69
+msgid "Set all"
+msgstr "Alle aktivieren"
+
+#: admin/class-error-reporting-admin.php:70
+msgid "Unset all"
+msgstr "Alle deaktivieren"
+
+#: admin/class-error-reporting-admin.php:71
+msgid "Save"
+msgstr "Speichern"
+
+#: error-reporting.php:32
+msgid "Allows Admins to granularly control PHP's error reporting level."
+msgstr "Erlaubt Admins PHPs Error-Reporting-Level detailliert einzustellen."
+
+#: error-reporting.php:33
+msgid "Settings"
+msgstr "Einstellungen"

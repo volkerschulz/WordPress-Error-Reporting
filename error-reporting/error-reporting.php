@@ -28,6 +28,9 @@
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
+	// The following is unreachable and for PO-Edit only
+	$unreachable = __('Allows Admins to granularly control PHP\'s error reporting level.', 'error-reporting');
+	$unreachable = __('Settings', 'error-reporting');
 }
 
 /**
