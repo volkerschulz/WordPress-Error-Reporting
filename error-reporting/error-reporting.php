@@ -14,11 +14,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Error Reporting
- * Plugin URI:        http://example.com/error-reporting-uri/
+ * Plugin URI:        https://github.com/volkerschulz/WordPress-Error-Reporting
  * Description:       Allows Admins to granularly control PHP's error reporting level.
  * Version:           1.0.0
  * Author:            volkerschulz
- * Author URI:        https://volkerschulz.de/
+ * Author URI:        https://volkerschulz.de
  * License:           GPLv3 or later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       error-reporting
