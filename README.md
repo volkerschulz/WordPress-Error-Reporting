@@ -19,6 +19,10 @@ The plugin, if activated, will override the error level only. Make sure to addit
 
 PR are welcome against the [develop branch](https://github.com/volkerschulz/WordPress-Error-Reporting/tree/develop) of this project.
 
+## Credits
+
+Special Thanks to [NRTRX](https://wordpress.stackexchange.com/users/62948/nrtrx) for the idea with the MU plugin and to [CK MacLeod](https://stackoverflow.com/users/3692443/ck-macleod) for pointing that out [here](https://stackoverflow.com/questions/77336959/disable-wordpress-php-deprecated-messages-from-debug-log/77340500#comment136411953_77336959).
+
 ## Security
 
 If you discover a security vulnerability within this package, please send an email to security@volkerschulz.de. All security vulnerabilities will be promptly addressed. Please do not disclose security-related issues publicly until a fix has been announced. 
