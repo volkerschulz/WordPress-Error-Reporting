@@ -60,7 +60,7 @@ class Error_Reporting_Admin {
 	 * @return void
 	 */
 	public function add_menu_page() {
-		add_options_page(__('Error reporting settings', 'error-reporting'), __('Error reporting', 'error-reporting'), 'manage_options', 'error-reporting-plugin', [$this, 'settings_page']);
+		add_options_page(__('Error Reporting Settings', 'error-reporting'), __('Error Reporting', 'error-reporting'), 'manage_options', 'error-reporting-plugin', [$this, 'settings_page']);
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Error_Reporting_Admin {
 		$init_value = (int)error_reporting();
 		?>
 		<div class="wrap">
-			<h1><?= __('Settings &rsaquo; Error reporting', 'error-reporting'); ?></h1>
+			<h1><?= __('Error Reporting Settings', 'error-reporting'); ?></h1>
 			<h2><?= __('Error level', 'error-reporting'); ?></h2>
 			<form class="error_reporting_set_form" action="" method="POST">
 				<input type="hidden" name="error_reporting_set_level" class="error_reporting_calculated_level" value="<?= $init_value ?>" />
